@@ -14,7 +14,11 @@ class CallbackController
     }
     public function handleCallback()
     {
-
+        if (isset($_GET['error'])) {
+            session_unset();
+            header('Location: /');
+            exit();
+        }
         if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
             $this->calendarService->setAccessToken($_SESSION['access_token']);
         } elseif (isset($_GET['code'])) {
