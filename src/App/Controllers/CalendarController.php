@@ -96,10 +96,10 @@ class CalendarController
 
         try {
             $this->calendarService->createEvent(
-                $_POST['summary'],
-                $_POST['description'],
-                $_POST['start_datetime'] . ':00',
-                $_POST['end_datetime'] . ':00'
+                htmlspecialchars($_POST['summary']),
+                htmlspecialchars($_POST['description']),
+                htmlspecialchars($_POST['start_datetime']) . ':00',
+                htmlspecialchars($_POST['end_datetime']) . ':00'
             );
 
             FlashMessage::set('Data stored successfully!', 'success');
