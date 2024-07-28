@@ -1,0 +1,27 @@
+Initial buffer content: 
+Initial buffer content: 
+Initial buffer content: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
+Initial buffer content: 
+Buffer before clearing: hello
+Buffer after clearing: 
