@@ -79,14 +79,14 @@ class Router
             echo "Error: Controller class $controller does not exist.<br>";
             return;
         }
-        
+
         $controllerInstance = new $controller();
-        
+
         if (!method_exists($controllerInstance, $action)) {
             echo "Error: Action $action does not exist in controller $controller.<br>";
             return;
         }
-        
+
         call_user_func_array([$controllerInstance, $action], $params);
     }
 }

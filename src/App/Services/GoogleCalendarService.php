@@ -23,7 +23,7 @@ class GoogleCalendarService
         if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
             $this->setAccessToken($_SESSION['access_token']);
         }
-      
+
         if ($this->isAccessTokenExpired()) {
             if (isset($_SESSION['refresh_token'])) {
                 $_SESSION['access_token'] = $this->refreshAccessToken();
@@ -31,7 +31,6 @@ class GoogleCalendarService
         }
 
         $this->service = new Google_Service_Calendar($this->client);
-       
     }
 
     public function getAuthUrl()

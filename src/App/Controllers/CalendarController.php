@@ -88,15 +88,13 @@ class CalendarController
         $validator = new Validator();
         $isValid = $validator->validateCalendarEvent($_POST);
 
-        if(!$isValid) {
+        if (!$isValid) {
             FlashMessage::set('Validdation Error', 'danger', $validator->getErrors());
             header('Location: /event/create');
             exit();
-
         }
 
         try {
-
             $this->calendarService->createEvent(
                 $_POST['summary'],
                 $_POST['description'],
@@ -125,7 +123,6 @@ class CalendarController
             http_response_code(200);
             echo json_encode(['success' => 'Successfully Deleted']);
         } catch (Exception $ex) {
-
             http_response_code(500);
             echo json_encode(['error' => $ex->getMessage()]);
         }
